@@ -2,9 +2,9 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { User } from '../../../app/interfaces/user';
-import { ErrorService } from '../../../../src/app/services/error.service';
-import { UserService } from '../../../../src/app/services/user.service';
+import { User } from 'src/app/interfaces/user';
+import { ErrorService } from 'src/app/services/error.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -47,7 +47,7 @@ export class SignInComponent implements OnInit {
 
     this.loading = true;
     this._userService.signIn(user).subscribe({
-      next: () => {
+      next: (v) => {
         this.loading = false;
         this.toastr.success(`El usuario ${this.username} fue registrado con exito`, 'Usuario registrado');
         this.router.navigate(['/login']);
