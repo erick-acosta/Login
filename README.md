@@ -1,7 +1,7 @@
 
 # Desarrollo de Login
 
-Este proyecto te ofrece un sistema de login  y funcional utilizando las últimas versiones de:
+Este proyecto te ofrece un sistema de login  y funcional.
 
 
 ## Caracteristicas
@@ -13,7 +13,7 @@ Este proyecto te ofrece un sistema de login  y funcional utilizando las últimas
 - Manejo de errores.
 
 ## Versiones
-
+Utilizando las últimas versiones de:
 
 - Angular (15+)
 - NodeJS (18+)
