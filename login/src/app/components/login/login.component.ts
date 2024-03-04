@@ -26,13 +26,13 @@ export class LoginComponent implements OnInit {
 
   login() {
 
-    // Validamos que el usuario ingrese datos
+    
     if (this.username == '' || this.password == '') {
       this.toastr.error('Todos los campos son obligatorios', 'Error');
       return
     }
 
-    // Creamos el body
+    
     const user: User = {
       username: this.username,
       password: this.password

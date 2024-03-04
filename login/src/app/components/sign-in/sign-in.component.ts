@@ -12,6 +12,7 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./sign-in.component.css']
 })
 export class SignInComponent implements OnInit {
+  email: string ='';
   username: string = '';
   password: string = '';
   confirmPassword: string = '';
@@ -27,19 +28,20 @@ export class SignInComponent implements OnInit {
 
   addUser() {
 
-    // Validamos que el usuario ingrese valores
+    
+    
     if (this.username == '' || this.password == '' || this.confirmPassword == '') {
       this.toastr.error('Todos los campos son obligatorios', 'Error');
       return;
     }
 
-    // Validamos que las password sean iguales
+    
     if (this.password != this.confirmPassword) {
       this.toastr.error('Las passwords ingresadas son distintas', 'Error');
       return;
     }
 
-    // Creamos el objeto
+    
     const user: User = {
       username: this.username,
       password: this.password

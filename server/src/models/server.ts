@@ -2,7 +2,7 @@ import express, { Application } from 'express';
 import cors from 'cors';
 import routesProduct from '../routes/product';
 import routesUser from '../routes/user';
-import { Product } from './product';
+import { Product } from './curso';
 import { User } from './user';
 
 class Server {
@@ -31,10 +31,10 @@ class Server {
     }
 
     midlewares() {
-        // Parseo body
+        
         this.app.use(express.json());
 
-        // Cors
+        
         this.app.use(cors());
     }
 

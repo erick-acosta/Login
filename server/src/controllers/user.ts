@@ -40,7 +40,7 @@ export const loginUser = async (req: Request, res: Response) => {
 
     const { username, password } = req.body;
 
-   // Validamos si el usuario existe en la base de datos
+  
    const user: any = await User.findOne({ where: { username: username } });
 
    if(!user) {
@@ -49,7 +49,7 @@ export const loginUser = async (req: Request, res: Response) => {
         })
    }
 
-   // Validamos password
+   
    const passwordValid = await bcrypt.compare(password, user.password)
    if(!passwordValid) {
     return res.status(400).json({
@@ -57,7 +57,7 @@ export const loginUser = async (req: Request, res: Response) => {
     })
    }
 
-   // Generamos token
+ 
    const token = jwt.sign({
     username: username
    }, process.env.SECRET_KEY || 'pepito123');

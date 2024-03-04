@@ -37,9 +37,9 @@ class Server {
         this.app.use('/api/users', user_1.default);
     }
     midlewares() {
-        // Parseo body
+        
         this.app.use(express_1.default.json());
-        // Cors
+        
         this.app.use((0, cors_1.default)());
     }
     dbConnect() {
